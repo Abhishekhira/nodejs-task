@@ -4,7 +4,8 @@ console.log(notes.getNotes())
 // const data=require('./file.json');
 const yargs=require("yargs");
 
-//created add command 
+//created add command
+console.log('commands started')
 yargs.command({
     command:"add",
     describe:'add a new note',

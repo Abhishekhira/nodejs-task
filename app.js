@@ -38,7 +38,7 @@ yargs.command({
     },
     handler:function(argv){
         console.log(argv)
-        
+        console.log('app.js is also changes')
        notes.removeNotes(argv.title)
     }
 })

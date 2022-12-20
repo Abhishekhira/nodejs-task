@@ -6,7 +6,7 @@ function getNotes() {
 
 function addNotes(title,body) {
     const notes=loadNotes();
-
+   console.log("file is change")
    console.log("hiihiii")
 
     const duplicateNotes=notes.filter(function(note){

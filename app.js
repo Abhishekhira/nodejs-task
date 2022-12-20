@@ -1,7 +1,7 @@
 const notes=require('./notes');
 const http=require('http')
 console.log(notes.getNotes())
-// const data=require('./file.json');
+const data=require('./file.json');
 const yargs=require("yargs");
 
 //created add command
@@ -72,10 +72,10 @@ yargs.command({
 
 yargs.parse()
 
-// http.createServer((req,resp)=>{
-//     resp.writeHead(200,{
-//         "Content-Type":"application/json"
-//     })
-//     resp.write(JSON.stringify(data));
-//     resp.end()
-// }).listen(4600)
+http.createServer((req,resp)=>{
+    resp.writeHead(200,{
+        "Content-Type":"application/json"
+    })
+    resp.write(JSON.stringify(data));
+    resp.end()
+}).listen(4600)
